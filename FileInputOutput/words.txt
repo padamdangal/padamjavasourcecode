@@ -1,0 +1,4 @@
+You can use Java's Path class to create objects that contain information about files and
+directories, such as their locations, sizes, creation dates, and whether they even exist. You use
+the Files class to perform operations on files and directories, such as deleting them,
+determining their attributes, and creating input and output streams.
