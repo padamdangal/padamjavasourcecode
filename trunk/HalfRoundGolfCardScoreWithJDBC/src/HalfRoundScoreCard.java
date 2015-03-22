@@ -207,10 +207,6 @@ public class HalfRoundScoreCard {
 	        }
 	}
 	
-	/**
-	 * Main method will will execute up on running
-	 * @param args
-	 */
 	
 	public static void calculateAndPost(){
 		
@@ -540,7 +536,10 @@ public static boolean checkingNameInDB(String name){
 	
 	return status;
 }
-
+/**
+ * Main method will will execute up on running
+ * @param args is not used
+ */
 public static void main(String[] args) {
 	
 	// Connecting to the dataBase
