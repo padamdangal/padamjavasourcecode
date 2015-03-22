@@ -1,0 +1,6 @@
+Create table products
+(
+Code varchar(200),
+Description varchar(500),
+Price double
+);
