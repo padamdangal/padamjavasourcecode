@@ -1,0 +1,8 @@
+Your Request Informaton
+User Name:Padam
+User Department:IT
+Request type:Software(new install or updrade)
+Request Description:It problem
+Urgency : High(1-2 days completion)
+
+Your ticket Number for follow up is : 961033
