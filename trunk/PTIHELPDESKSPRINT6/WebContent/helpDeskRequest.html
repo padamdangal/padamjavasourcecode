@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Help Desk Request</title>
+
+<style type="text/css">
+  body{
+  background-color: lightblue;
+}
+</style>
+
+</head>
+<body>
+<strong>Help Desk Request</strong><br><br>
+<form action="request" method="post">
+<table>
+<tr>
+<td>User Name:</td>
+<td><input type="text" name="userName"></td>
+</tr>
+<tr>
+<td>User Department:</td>
+<td><input type="text" name="userDept"></td>
+</tr>
+<tr>
+<td>Type Of Request:</td>
+<td><select name="problem">
+<option>Select</option>
+<option>Software(new install or upgrade)</option>
+<option>Hardware(repair or upgrade)</option>
+<option>Account assistance(new account needed or login problem)</option>
+</select></td>
+</tr>
+</table>
+
+Request Description:<br>
+<textarea rows="5" cols="50" placeholder="Your text here..." name="desc"></textarea><br>
+
+Urgency:<br>
+
+<input type="radio" name="urgency" value="Urgent">Urgent(0 - 4 hours completion)<br>
+<input type="radio" name="urgency" value="High">High(1 - 2 days completion)<br>
+<input type="radio" name="urgency" value="Medium">Medium(3 - 5 days completion)<br>
+<input type="radio" name="urgency" value="Low">Low(6+ days completion)<br>
+<input type="radio" name="urgency" value="No Hurry">No Hurry<br><br>
+
+<input type="reset" value="Clear">
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
