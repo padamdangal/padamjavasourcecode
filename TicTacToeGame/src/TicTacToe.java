@@ -1,3 +1,4 @@
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -11,7 +12,18 @@ import javax.swing.*;
  * @version 1.0.0
  *
  */
-public class TicTacToe extends JPanel implements ActionListener{
+public class TicTacToe extends JFrame implements ActionListener{
+	
+    private JMenuBar mainMenuBar;
+	
+	//references to the top level menus(these appears on the menu bar)
+	private JMenu gameMenu;
+	private JMenu helpMenu;
+	
+	private JMenuItem replay;
+	private JMenuItem exit;
+	private JMenuItem help;
+	private JMenuItem author;
 	
 	//creating the buttons
 	private JButton buttonOne;
@@ -43,22 +55,14 @@ public class TicTacToe extends JPanel implements ActionListener{
 	 */
 	public static void main(String[] args) {
         
-		//Create the java window 
-        JFrame frame = new JFrame("Tic-Tac-Toe");
-        frame.setSize(250, 275);
-		
-       //now go and populate 
-		frame.setContentPane(new TicTacToe());
-		
-		//add the behavior to terminate this JFrame when were finished with it
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		//Seting the app so that it cannot be resized
-		frame.setResizable(false);
+		TicTacToe mFrame = new TicTacToe();
+        mFrame.setSize(250, 275);
+
+        //Seting the app so that it cannot be resized
+		mFrame.setResizable(false);
 		
 		//let it be seen
-		frame.setVisible(true);
-
+		mFrame.setVisible(true);
 	}
 
 	/**
@@ -66,6 +70,63 @@ public class TicTacToe extends JPanel implements ActionListener{
 	 */
 	public TicTacToe(){
 		
+		mainMenuBar = new JMenuBar();
+		
+		//build the jframe
+		setTitle("Tic-Tac-Toe");
+		
+		//add the behavior to terminate this JFrame when were finished with it
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//setLayout(new FlowLayout());
+		
+		//Now build the menu
+		//create the menu bar
+		this.setJMenuBar(mainMenuBar);
+		
+		//create the top level menu(s) 'File', 'Colors' and Help
+		gameMenu = new JMenu("Game");
+		helpMenu = new JMenu("Help");
+		
+		
+		//add the keyboard short cuts (Mnemonics)
+		gameMenu.setMnemonic('G');    //for the Game menu
+		helpMenu.setMnemonic('H');   //for the help menu
+				
+		//now create all of the menu items (see running Demo)
+		replay = new JMenuItem("RePlay");
+		replay.setMnemonic('r');
+		exit = new JMenuItem("Exit");
+		exit.setMnemonic('x');
+		
+		help = new JMenuItem("Help");
+		help.setMnemonic('H');
+		author = new JMenuItem("Author");
+		author.setMnemonic('A');
+		
+		
+		//add menu items to the Game
+		gameMenu.add(replay);
+		gameMenu.add(exit);
+		
+		
+		//add menu items to the Help
+		helpMenu.add(help);
+		helpMenu.add(author);
+		
+		
+		//finally add the top level menus to the menu bar
+		mainMenuBar.add(gameMenu);
+		mainMenuBar.add(helpMenu);
+		
+		//add the menu item action listeners
+		replay.addActionListener(this);
+		exit.addActionListener(this);
+		help.addActionListener(this);
+		author.addActionListener(this);
+		
+				
+		//------------------------------------------------------------------------------
 		// more on this layout manager later
 		this.setLayout(new GridLayout(3,3));
 		this.setBackground(Color.WHITE);
@@ -105,8 +166,33 @@ public class TicTacToe extends JPanel implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-	//increasing the count in each press
-	count++;	
+		//increasing the count in each press
+		count++;
+
+		//grab the content pane
+		//Container con =  getContentPane();
+		
+		//depending on 'who-done-it', color label
+				if(exit == e.getSource()){
+				   System.exit(0);
+				}else if(replay == e.getSource()){
+					
+					//setting the buttons to empty value, and background color to white and enabling them
+					for (int i = 0; i < buttons.length; i++) {
+						 buttons[i].setText("");
+						 buttons[i].setBackground(Color.WHITE);
+						 buttons[i].setEnabled(true);
+					}
+					
+					count = 0;
+					player = 0;
+
+				}else if(help == e.getSource()){
+					JOptionPane.showMessageDialog(null, "Really!! \nYou need help for Playing this Tic-Tac-Toe");
+				}else if(author == e.getSource()){
+					JOptionPane.showMessageDialog(null, "Author : Padam Dangal\nVersion : 1.0.0");
+				}
+		
 		
 	//using for loop to assign text 'X' for even count and 'O' for odd count
 	 for (int i = 0; i < buttons.length; i++) {
@@ -144,7 +230,7 @@ public class TicTacToe extends JPanel implements ActionListener{
 			
 			JOptionPane.showMessageDialog(null, "Its a tie, Play Again");
 			
-			//setting the buttons to empty value, and background color to white and enabling them
+			/*//setting the buttons to empty value, and background color to white and enabling them
 			for (int i = 0; i < buttons.length; i++) {
 				 buttons[i].setText("");
 				 buttons[i].setBackground(Color.WHITE);
@@ -152,7 +238,7 @@ public class TicTacToe extends JPanel implements ActionListener{
 			}
 			
 			count = 0;
-			player = 0;
+			player = 0;*/
 		}
 		player++;	
 		}
