@@ -1,0 +1,116 @@
+<!-- edit-contact-information -->
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+<div id="dialog-fade"  id="sales-profile" tabindex="-1" role="dialog" style="width: 600px;">
+<div id="dialog-bg" style="height: 400px;">
+       <div id="modal-header">Edit Contact Information</div>
+           <div id="modal-body">
+           		  <div class="modal-content" style="height: 300px; width: 580px;">
+           		<form name="editPhoneContactInformation">
+						<div class="">
+							<fieldset class="qr">
+								<legend>Address, Phone and Email</legend>
+							
+							<table style="width: 100%;">
+								<colgroup>
+									<col style="width: 20%;">
+									<col style="width: 20%;">
+									<col style="width: 20%;">
+									<col style="width: 40%;">
+								</colgroup>
+								<tr>
+									<td style="padding-top: 6px;" colspan="3"><span
+									class="fieldLabel">Country of residence</span><br/>
+									<select><option value="">Select....</select></td>
+								</tr>
+								<tr>
+									<td style="padding-top: 6px;" colspan="3"><span
+									class="fieldLabel">Residential Address</span><span class="requiredFieldIndicator">*</span><br/>
+									<input type="text" name="address1" placeholder="addressLine1" required style="margin-top: 4px; width: 40%;"><br/>
+									<input type="text" name="address2" placeholder="addressLine2" required style="margin-top: 4px; width: 40%;">
+									</td>
+								</tr>
+								<tr>
+									<td style="padding-top: 6px;" colspan=""><span
+									class="fieldLabel">City</span><span class="requiredFieldIndicator">*</span><br/>
+									<input type="text" name="city" required style="margin-top: 4px; width: 40%;">
+									</td>
+									<td style="padding-top: 6px;" colspan=""><span
+									class="fieldLabel">State/US Territory</span><span class="requiredFieldIndicator">*</span><br/>
+									<select name="state" required><option value="">Select....</select>
+									</td>
+									<td style="padding-top: 6px;" colspan=""><span
+									class="fieldLabel">Zip Code</span><span class="requiredFieldIndicator">*</span><br/>
+									<input id="zipcode5" name="zip-code5" maxlength="5" size="5" required>-<input id="zipcode4" name="zip-code4" 
+									maxlength="4" size="4" required>
+									</td>
+								</tr>
+							</table>
+							</fieldset>
+						<br/>
+							<table style="width: 100%;" class="">
+								<colgroup>
+									<col style="width: 70%;"/>
+									<col style="width: 10%;" style="horizontal-align: middle;"/>
+									<col style="width: 20%;"/>
+								</colgroup>
+								<tr>
+									<td class="commentHeader">Phone Numbers<span class="requiredFieldIndicator">*</span>
+									<span class="commentHeader">(Limit One Phone per Type)</span></td>
+									<td class="commentHeader">Best#</td>
+									<td class="commentHeader">&nbsp;</td>
+								</tr>
+								<tbody>
+									<tr>
+										<td>
+											<table width="100%">
+												<tr>
+													<td width="20%"><select name="phoneType" required><option value="">
+													Select....</option>
+													<option value="">Cell</option>
+													<option value="">Home</option>
+													<option value="">Work</option>
+													<option value="">Fax</option>
+													<option value="">International</option></select>
+													</td>
+													<td width="30%"><input type="text" value="" maxlength="10"></td>
+													<td width="30%">&nbsp;</td>
+													<td width="18%"><span>ext.<input type="text" value="" size="4" maxlength="4"></span></td>
+													<td width="2%"></td>
+												</tr>
+											</table>
+										</td>
+										<td><input type="radio" value=""></td>
+										<td>
+											<table>
+												<tr>
+													<td width="40%"><span><a href="">Delete</a></span></td>
+													<td width="40%"><span><a href="#">Add Phone</a></span></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr style="background: #FFFFFF">
+										<td></td>
+										<td colspan="2"><span>@@@ is the <span class="fieldLabel"> Best#</span> to call</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<table width="100%">
+								<tr>
+									<td style="padding-top: 6px;" colspan="2"><span class="fieldLabel">Email Address</span><br/>
+									<input type="email" name="email" maxlength="60" style="width: 30%;"></td>
+								</tr>
+							</table>
+						</div>
+						
+					</form>
+					</div>
+					<div id="dialog-buttons" style="text-align: center;">
+							<button type="button" class="medium green button" onclick="submit">Submit</button>
+							<button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+					</div>
+					</div>
+				</div>
+			</div>

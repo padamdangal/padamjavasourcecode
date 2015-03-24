@@ -1,0 +1,69 @@
+<!-- Follow Up add -->
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="resources/css/bootsrap.css"/>
+
+	<div class="modal-head" style="over-flow-y: auto"
+		id="follow-up-add" tabindex="-1" role="dialog" aria-labelledby="follow-up-add-label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					
+						<h3 class="modal-title" id="follow-up-add-label">Add Follow Ups</h3>
+					</div><br/><br/>
+				<form name="followUpAdd">
+					<div style="width: 100%; overflow-y: auto;">
+						<div class="modal-body">
+							<table width="100%">
+								<colgroup>
+									<col width="50%">
+									<col width="25%">
+									<col width="25%">
+								</colgroup>
+								<tr>
+									<td style="padding-top: 6px;"><span class="fieldLabel">Customer</span><br>
+										Ran Gurung<br>ECI-1234477478</td>
+									<td colspan="2" style="text-align: right;"><span class="requiredFieldIndicator">* required field</span>
+										<table border="1" width="100%">
+											<tr>
+												<td bgcolor="#e8e8e8"><b>Follow Ups</b></td>
+											</tr>
+											<tbody>
+												<tr>
+													<td>
+														<div style="height: 100px; overflow-y: auto;">
+															<table width="100%" class="">
+																<tr ng-repeat="">
+																	<td style="border: 1px solid grey;">JPT Test- 01/23/2015</td>
+																</tr>
+															</table>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="padding-top: 6px;"><span class="fieldLabel">Assign To</span><span class="requiredFieldIndicator">*</span><br>
+										<select class="dropDown-normal" required><option value="">Select....</option>
+										<option value="">Ran Gurung-F567165</option><option value="">OTHER</option></select></td>
+								</tr>
+								
+							</table>
+						</div>
+					</div>
+				</form>
+				<br>
+				<div class="modal-footer" style="height: 40px; text-align: center;">
+					<div style="margin-top: 0px;">
+						<button class="button-secondary" type="button" data-dismiss="modal">
+							<span class="left" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+							<span class="middle" onmouseover="javascript:this.style.curser = 'pointer'">Close</span>
+							<span class="right" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>	

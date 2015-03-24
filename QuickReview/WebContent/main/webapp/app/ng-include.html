@@ -1,0 +1,107 @@
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<!-- Assigned Banker -->
+<div class="modal-fade" style="over-flow-y: auto;z-index: 9999;"
+		id="assigned-banker" tabindex="-1" role="dialog"
+		aria-labelledby="assigned-banker-label" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+						
+					<h3 class="modal-title" id="assigned-banker-label">Assigned Banker</h3>
+				</div><br/><br/>
+				<div class="modal-body">
+					<span class="BBpageHeader">Banker Details</span>
+					<table width="100%">
+						<tr>
+							<td>
+								<span class="fieldLabel">Banker Name</span><br>
+							</td>	
+						</tr>
+						<tr>
+							<td style="padding-top: 6px;">
+								<span class="fieldLabel">Job Title</span><br>
+							</td>	
+						</tr>
+						<tr>
+							<td  style="padding-top: 6px;">
+								<span class="fieldLabel">Standard ID</span><br>
+							</td>	
+						</tr>
+						<tr>
+							<td  style="padding-top: 6px;">
+								<span class="fieldLabel">Phone Number</span><br>
+							</td>	
+						</tr>
+						<tr>
+							<td  style="padding-top: 6px;">
+								<span class="fieldLabel">E-mail Address Name</span><br>
+							</td>	
+						</tr>
+						<tr>
+							<td  style="padding-top: 6px;">
+								<span class="fieldLabel">Branch</span><br>
+							</td>	
+						</tr>
+					</table>
+					<br>
+				</div>
+				<div class="modal-footer" style="height: 40px; text-align: center;">
+					<div style="margin-top: 0px;">
+						<button class="button secondary" type="button" data-dismiss="modal">
+							<span class="left" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+							<span class="middle" onmouseover="javascript:this.style.curser = 'pointer'">Close</span>
+							<span class="right" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<!-- Remove from list -->
+
+<div class="modal-fade" style="over-flow-y: auto;z-index: 9999;"
+		id="remove-from-list" tabindex="-1" role="dialog"
+		aria-labelledby="remove-from-list-label" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+						
+					<h3 class="modal-title" id="remove-from-list-label">Remove From List</h3>
+				</div><br/><br/>
+				<div class="modal-body">
+					<table width="100%">
+						<tr>
+							<td style="text-align: right; font-size: 13px; padding: 0px 10px;">
+								<span class="requiredFieldIndicator">*<b>required field</b></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>List</b><span class="requiredFieldIndicator">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td valign="middle">
+								<input type="checkbox" name="selectedList" value="">
+							</td>
+						</tr>
+					</table>
+				</div><br>
+				<div class="modal-footer" style="height: 40px; text-align: center;">
+					<div style="margin-top: 0px;">
+						<button class="button" type="button" ng-disabled="" ng-click="">
+							<span class="left" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+							<span class="middle" onmouseover="javascript:this.style.curser = 'pointer'">Remove</span>
+							<span class="right" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+						</button>
+						
+						<button class="button-secondary" type="button" data-dismiss="modal">
+							<span class="left" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+							<span class="middle" onmouseover="javascript:this.style.curser = 'pointer'">Cancel</span>
+							<span class="right" onmouseover="javascript:this.style.curser = 'pointer'"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
