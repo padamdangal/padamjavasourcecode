@@ -1,0 +1,8 @@
+Your Request Informaton
+User Name:Padam
+User Department:IT Dept
+Request type:Account assistancce(New account needed or login problem)
+Request Description:This is just to check
+Urgency : Medium(3-5 days completion)
+
+Your ticket Number for follow up is : 260174
