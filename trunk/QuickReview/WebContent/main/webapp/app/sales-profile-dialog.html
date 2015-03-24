@@ -1,0 +1,351 @@
+<!-- sales-profile-dialog -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+<div id="dialog-fade" style="width: 760px;" id="sales-profile" tabindex="-1" role="dialog">
+	<div id="dialog-bg"  style="height: 440px;">
+		<div id="modal-header">Sales-Profile</div>
+		<div id="modal-body">
+			<div class="modal-content" style="width: 730px;  height: 340px; ">
+				<form name="salesProfileDialog">
+					<div class="">
+						<div>
+							<fieldset class="qr">
+								<legend>Profile Owner-Ran B.-Last Update 01-13-15</legend>
+
+								<table width="100%">
+									<tr>
+										<td><span class="fieldLabel">Business Description</span><span
+											class="requiredFieldIndicator">*</span><br /> <textarea
+												name="businessDescription" data-trim="false" maxlength="100"
+												cols="40" rows="4" overflow-y="auto"
+												placeholder="Please provide description of busdiness"
+												required></textarea><br /> <span>{{financial.length}}
+												out of 100 characters used</span></td>
+									</tr>
+									<tr>
+										<td>
+											<table>
+												<tr>
+													<td style="width: 30%;"><span class="fieldLabel">Business
+															Established (MM/YYYY)</span> <span
+														class="requiredFieldIndicator">*</span><br /> <input
+														type="text" placeholder="MM" maxlength=2 minlength=2
+														name="established" style="width: 30px;">/<input
+														type="text" placeholder="YYYY" maxlength=4 minlength=4
+														name="established" style="width: 40px;"></td>
+													<td style="width: 25%;"><span class="fieldLabel">Owned
+															Since (MM/YYYY)</span> <span class="requiredFieldIndicator">*</span><br />
+														<input type="text" placeholder="MM" maxlength=2
+														minlength=2 name="ownedSince" style="width: 30px;">/<input
+														type="text" placeholder="YYYY" maxlength=4 minlength=4
+														name="ownedSince" style="width: 40px;"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+							<fieldset class="qr">
+								<legend>Primary Contact</legend>
+								<table width="100%">
+									<tr>
+										<td style="width: 25%"><span class="fieldLabel">First
+												Name</span><span class="requiredFieldIndicator">*</span><br /> <input
+											type="text" name="firstName" maxlength="20" required></td>
+										<td style="width: 25%"><span class="fieldLabel">Last
+												Name</span><span class="requiredFieldIndicator">*</span><br /> <input
+											type="text" name="firstName" maxlength="30" required></td>
+									</tr>
+									<tr>
+										<td><span class="fieldLabel">Telephone</span><span
+											class="requiredFieldIndicator">*</span><br /> <input
+											type="text" name="telephone" maxlength="10" required></td>
+										<td><span class="fieldLabel">Best Time to Call</span><span
+											class="requiredFieldIndicator">*</span><br /> <select
+											name="telephone" required><option value="">Morning</option>
+												<option value="">Afternoon</option>
+												<option value="">Evening</option>
+												<option value="">None</option></select></td>
+									</tr>
+								</table>
+							</fieldset>
+							<table>
+								<tr>
+									<td><span class="fieldLabel">Products/Services Sold</span><br>
+										<div class="checkbox">
+											<label class="checkbox-inline"><input type="checkbox"
+												name="">In-Person</label> <label class="checkbox-inline"><input
+												type="checkbox" name="">Internet</label> <label
+												class="checkbox-inline"><input type="checkbox"
+												name="">Phone</label> <label class="checkbox-inline"><input
+												type="checkbox" name="">Mail</label>
+										</div></td>
+								</tr>
+								<tr>
+									<td><span class="fieldLabel">Debit/Credit Cards
+											Accepted</span><br> <label class="checkbox-inline"><input
+											type="radio" name="" value="true">Yes</label> <label
+										class="checkbox-inline"><input type="radio" name=""
+											value="false">No</label></td>
+								</tr>
+							</table>
+						</div>
+						<!-- Employement Section Starts -->
+						<div>
+							<fieldset class="qr">
+								<legend class="">Employement:</legend>
+								<table width="100%">
+									<tr>
+										<td width="45%"><span class="fieldLabel">Employer
+												for</span><br> <select class="dropDown-normal"><option
+													value="">select....</option>
+												<option value="">Employed By</option>
+												<option value="">Owns Business</option>
+												<option value="">Retired From</option>
+												<option value="">Employed By JPMorgan Chase</option>
+												<option value="">None</option></select></td>
+										<td width="55%"><span class="fieldLabel">Company
+												Name</span><br> <input type="text" name="employedBy"
+											class="dropDown-normal"></td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+						<div>
+							<fieldset class="qr">
+								<legend class="">Deposits/Convenience/Investments</legend>
+								<table width="100%">
+									<tr>
+										<td width="25%"><span class="fieldLabel">Checking
+												Where</span><br> <input type="text" style="width: 80px;">
+										</td>
+										<td width="25%"><span class="fieldLabel">Typical
+												Balance</span><br> $<input type="text" name="typicalBalance"
+											value="0.000" style="width: 80px;"></td>
+										<td width="25%">
+											<button type="button" class="button secondary"
+												style="padding: 4px;" id="">
+												<span class="middle"
+													onmouseover="javascript:this.style.cursor= 'pointer'">More>>></span>
+											</button>
+										</td>
+									</tr>
+								</table>
+								<table width="100%" ng-hide="">
+									<tr>
+										<td><span class="fieldLabel">Online Access</span><br>
+											<label class="checkbox-inline"><input type="radio"
+												value="true">Yes</label> <label class="checkbox-inline"><input
+												type="radio" value="false">No</label></td>
+									</tr>
+								</table>
+								<table width="100%">
+									<tr>
+										<td colspan="2"><span class="fieldLabel">Saving/CD</span><br>
+											<label class="checkbox-inline"><input type="radio"
+												value="" checked>Saving</label> <label
+											class="checkbox-inline"><input type="radio" value="">CD</label>
+											<label class="checkbox-inline"><input type="radio"
+												value="">None</label></td>
+										<td><span class="fieldLabel">Where</span><br> <label
+											class="checkbox-inline"><input type="text" value=""
+												style="width: 80px;"></label></td>
+										<td><span class="fieldLabel">Balance</span><br> <label
+											class="checkbox-inline">$<input type="text"
+												value="0.000" style="width: 80px;"></label></td>
+										<td><span class="fieldLabel">Maturity Date</span><label
+											class="checkbox-inline"><span
+												class="requiredFieldIndicator">*</span><br> <input
+												type="text" value="" class="" style="width: 80px;"></label>
+
+										</td>
+										<td>
+											<button type="button" class="button secondary"
+												style="padding: 4px;" id="">
+												<span class="middle"
+													onmouseover="javascript:this.style.cursor= 'pointer'">More>>></span>
+											</button>
+										</td>
+									</tr>
+								</table>
+								<table width="100%">
+									<tr>
+										<td width="30%"><span class="fieldLabel">Investment/Retirement-
+												Where</span><br> <input type="text"></td>
+										<td width="70%"><span class="fieldLabel">Investment
+												Type</span><br> <select class="dropDown-normal">
+												<option value="">Select....</option>
+												<option value="">Brokerage Service</option>
+												<option value="">Profit Sharing Plan</option>
+												<option value="">Simple IRA</option>
+												<option value="">401K Plan</option>
+										</select></td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+						<!-- Credit Card Section -->
+						<div>
+							<fieldset class="qr">
+								<legend>Credit Cards</legend>
+								<table width="100%">
+									<tr>
+										<td width="25%"><span class="fieldLabel">Have
+												Credit Card</span><br> <label class="checkbox-inline"
+											style="padding: 0px 0px 0px 5px;"> <input
+												type="radio" value="true">Yes
+										</label> <label class="checkbox-inline"
+											style="padding: 0px 0px 0px 5px;"> <input
+												type="radio" value="false">No
+										</label></td>
+										<td width="25%"><span class="fieldLabel">Earning
+												Rewards</span><br> <label class="checkbox-inline"
+											style="padding: 0px 0px 0px 5px;"> <input
+												type="radio" value="true">Yes
+										</label> <label class="checkbox-inline"
+											style="padding: 0px 0px 0px 5px;"> <input
+												type="radio" value="false">No
+										</label></td>
+										<td width="25%"><span class="fieldLabel">Carry
+												Balance</span><br> <label class="checkbox-inline"
+											style="padding: 0px 0px 0px 5px;"> <input
+												type="radio" value="true">Yes
+										</label> <label class="checkbox-inline"
+											style="padding: 0px 0px 0px 5px;"> <input
+												type="radio" value="false">No
+										</label></td>
+										<td width="25%"><span class="fieldLabel">Credit
+												Card Balances</span><br> <label class="checkbox-inline"
+											style="padding: 5px 5px 5px 5px;"> $<input
+												type="text" value="0.0" name="" style="width: 80px;"></label>
+
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+						<!-- Loans And Lines Section -->
+						<div>
+							<fieldset class="qr">
+								<legend>Loans and Lines</legend>
+								<table width="100%">
+									<tr>
+										<td width="25%"><span class="fieldLabel">Homeowner</span><br>
+											<label class="checkbox-inline" style="padding: 0px;">
+												<input type="radio" value="true">Yes
+										</label> <label class="checkbox-inline" style="padding: 0px;">
+												<input type="radio" value="false">No
+										</label> <label class="checkbox-inline" style="padding: 0px;">
+												<input type="radio" value="false">Unknown
+										</label></td>
+										<td width="25%"><span class="fieldLabel">Market
+												Value</span><br> $<input type="text" value="0.00"
+											name="marketValue" style="width: 80px;"></td>
+										<td width="25%"><span class="fieldLabel">1st Mtg
+												Balance </span><br> $<input type="text" value="0.00"
+											name="firstMortgageBalance" style="width: 80px;"></td>
+										<td width="25%"><span class="fieldLabel">Rate</span><br>
+											<input type="text" value="0.00" name="firstMortgageRate"
+											style="width: 80px;">%</td>
+									</tr>
+								</table>
+								<table width="100%">
+									<tr>
+										<td colspan="3"><span class="fieldLabel">Moving or
+												Buying Home in Next 12 Months</span><br> <label
+											class="checkbox-inline" style="padding: 0px;"><input
+												type="radio" value="true">Yes</label> <label
+											class="checkbox-inline" style="padding: 0px;"> <input
+												type="radio" value="false">No
+										</label></td>
+									</tr>
+								</table>
+								<table width="100%">
+									<tr>
+										<td width="25%"><span class="fieldLabel">Loan/Line
+												Type</span><br> <select name="loanType"
+											class="dropDown-normal"><option value="">Select....</option>
+												<option value="">Line of Credit</option>
+												<option value="">Installment Loan</option>
+												<option value="">Equipment Lease</option>
+												<option value="">Owner Occupied Real State</option></select></td>
+										<td width="25%"><span class="fieldLabel">Balance</span><br>
+											$<input type="text" value="0.00" name="loanBalance"
+											style="width: 80px;"></td>
+										<td width="25%"><span class="fieldLabel">Rate</span><br>
+											<input type="text" value="0.00" name="loanRate"
+											style="width: 80px;">%</td>
+										<td width="25%"><button type="button"
+												class="button secondary" id="">
+												<span class="middle">More>>></span>
+											</button></td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+						<!-- Business Financial Profile -->
+						<div>
+							<table width="100%">
+								<tr>
+									<td width="25%"><span class="fieldLabel">Over 100
+											Checks Deposited per Month</span><br> <label
+										class="checkbox-inline" style="padding: 0px;"><input
+											type="radio" value="true">Yes</label> <label
+										class="checkbox-inline" style="padding: 0px;"> <input
+											type="radio" value="false">No
+									</label></td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="40%"><span class="fieldLabel">Personal
+											Account At</span><br> <label class="checkbox-inline"> <input
+											type="checkbox" name="accountAtChase">Chase
+									</label> <label class="checkbox-inline"> <input type="checkbox"
+											name="accountAtOther">Other Bank
+									</label></td>
+									<td width="60%"><span class="fieldLabel">Where</span><br>
+										<input type="text" style="width: 100px;" maxlength="60">
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- Additional Informations -->
+						<div>
+							<table>
+								<tr>
+									<td colspan="2"><span class="fieldLabel">Additional
+											Information</span><br> <textarea rows="2" cols="40"
+											data-trim="false" maxlength="500"></textarea><br> <span>{{financial.description}}
+											out of 500 characters used.</span></td>
+								</tr>
+								<tr>
+									<td>
+										<button class="button secondary" type="button"
+											style="margin-right: 20px;">
+											<span class="left"
+												onmouseover="javascript:this.style.cursor= 'pointer'">Print</span>
+										</button>
+										<button class="button secondary" type="button"
+											style="margin-right: 20px;">
+											<span class="middle"
+												onmouseover="javascript:this.style.cursor= 'pointer'">Save</span>
+										</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- Page Contents Ends -->
+
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+		<div id="dialog-buttons">
+			<button class="large green button">Save And Close</button>
+			<button class="large red button">Cancel</button>
+		</div>
+	</div>
+</div>

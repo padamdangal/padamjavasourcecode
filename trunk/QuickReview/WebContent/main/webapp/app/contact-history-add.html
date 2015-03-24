@@ -1,0 +1,62 @@
+<!-- contact-history-add -->
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+<div id="dialog-fade" id="sales-profile" tabindex="-1" role="dialog" style="width: 600px;">
+	<div id="dialog-bg" style="height: 380px;">
+		<div id="modal-header">Contact History Add</div>
+		<div id="modal-body"
+			style=" width: 560px; border-top: 1px solid #B9B9B9;">
+			<div class="modal-content" style="height: 280px; width: 580px;">
+
+				<form name="contactHistoryAdd" required>
+					<div style="width: 100%; overflow: auto;">
+						<div class="">
+							<div>
+								<table width="100%">
+									<tr>
+										<td
+											style="text-align: right; font-size: 13px; padding: 0px 10px;">
+											<span class="requiredFieldIndicator">*<b>required</b></span>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 6px;"><span class="fieldLabel">Contact
+												Date</span><br /> <span class="">01-11-15</span></td>
+									</tr>
+									<tr>
+										<td style="padding: 6px;"><span class="fieldLabel">Customer</span><br />
+											<span class="">(ECI-123455678)</span></td>
+									</tr>
+									<tr>
+										<td style="padding: 6px;"><label><span
+												class="fieldLabel">Description</span></label> <span
+											class="requiredFieldIndicator">*</span><br /> <select
+											name="" required><option value="">select....</option>
+												<option value=""></option></select></td>
+									</tr>
+									<tr>
+										<td style="padding: 6px;"><span class="fieldLabel">Notes</span>
+											<span class="requiredFieldIndicator">*</span><br /> <textarea
+												name="notes" required data-trim="false" maxlength="200"
+												cols="50" rows="4" overflow="auto"></textarea><br /> <span>{text.length}
+												out of 200 characters used.</span></td>
+									</tr>
+									<tr>
+										<td style="padding: 6px;"><span class="fieldLabel">Created
+												By</span><br /> <span class=""></span></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<div id="dialog-buttons" style="text-align: center;">
+				<button type="button" class="medium green button" onclick="submit">Submit</button>
+				<button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+		</div>
+	</div>
+</div>

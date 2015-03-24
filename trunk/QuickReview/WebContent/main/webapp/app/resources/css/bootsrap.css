@@ -1,0 +1,47 @@
+<!--##### general css -->
+
+html{
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+header, footer {
+	display: block;
+}
+hr {
+	height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+button,
+input,
+select,
+textarea{
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	line-height: inherit;
+}
+button,
+input[type="submit"]{
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+textarea{
+	overflow: auto;
+}
+select {
+	background: #fff !important;
+}
+sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	
+}
+

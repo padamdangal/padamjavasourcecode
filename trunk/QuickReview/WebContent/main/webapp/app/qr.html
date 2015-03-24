@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" data-ng-app="QRApp">
+<head>
+<meta charset="ISO-8859-1" http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Quick Review</title>
+<style type="text/css">
+body {
+	background-attachment: fixed;
+    font: normal normal 120%/1.2 tahoma,verdana,humanist san-serif;
+	line-height: 125%;
+	
+	color: rgb(225,0,0);
+	margin: 0;
+}
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="css/bootsrap.qr.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> 
+
+<script src="js/bootstrap.min.js"></script>
+<script src=js/angular.min.js></script>
+<script src="js/angular-resources.js"></script>
+<script src="js/jquery-1.8.1.js"></script>
+<script type="text/javascript" src="resources/js/QRControllerNG.js"></script>
+</head>
+
+<body data-ng-controller="QRControllerNG">
+	<div class="borderLayer">
+		<div class="pageDiv">
+			<h1 class="animation"><b>Wel-Come To Quick Review Page</b></h1>
+			<br/>
+			<!-- ******ROW 1******-->
+			<table class="qrTable">
+				<tr>
+					<td width="25%"><span class="fieldLabel">HouseHold Members</span><br/>
+					<span><select data-ng-model="selections" data-ng-options="item.name for item in selections" data-ng-selected="obj.name == item.name"><option value="">select....</select></span>
+					</td>
+					<td width="15%" rowspan="3" valign="top">
+					<table class="qrTable">
+						<tr><td><span class="fieldLabel" >Date of Birth</span><br>
+							<span>{{item.dob}}</span></td></tr>
+						<tr><td><span class="fieldLabel">Military</span><br><span>{{item.military}}</span></td></tr>
+					</table>
+					</td>
+					<td width="15%" rowspan="3" valign="top">
+						<table class="qrTable">
+							<tr><td width="100%"><span class="fieldLabel" >SSN/EIN</span><br>
+								<span>{{item.ssn}}</span></td></tr>
+							<tr><td><span class="fieldLabel">ECI</span><br><span>{{item.eci}}</span></td></tr>
+						</table>
+					</td>
+					<td width="15%" rowspan="3" valign="top">
+						<table class="qrTable">
+							<tr><td><span class="fieldLabel">Assigned Banker</span><br><span>{{item.assign}}</span></td></tr>
+						</table>
+					</td>
+					<td width="15%" rowspan="3" valign="top">
+						<table class="qrTable">
+							<tr><td><span class="fieldLabel">Primary Officer</span><br><span>{{item.priOfficer}}</span></td></tr>
+							<tr><td><span class="fieldLabel">Secondary Officer</span><br><span>{{item.secOfficer}}</span></td></tr>
+							<tr><td><span class="fieldLabel">D&amp;B</span></td></tr>
+							
+						</table>
+					</td>
+					<td width="15%" rowspan="3" valign="top">
+						<table class="qrTable">
+							<tr><td><span class="fieldLabel">Segment</span><br><span>{{item.segment}}</span></td></tr>
+							<tr><td><span class="fieldLabel">D&amp;I</span></td></tr>
+						</table>
+					</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+			</table>
+			<br/>
+			
+#sales-profile			<!-- ******ROW 2****** -->
+			<table class="qrTable">
+				<colgroup>
+					<col width="13%"/>
+					<col width="5%"/>
+					<col width="9%"/>
+					<col width="1%"/>
+					<col width="12%"/>
+					<col width="10%"/>
+					<col width="1%"/>
+					<col width="10%"/>
+					<col width="8%"/>
+					<col width="32%"/>
+				</colgroup>
+				<tr><td class="sectionHeader"><b>Address</b></td>
+					<td class="sectionHeader" align="right"><a>more...</a></td>
+					<td class="sectionHeader" align="right"><a data-target="#edit-phone-contact-informationDev" href="edit-phone-contact-information.html">edit</a></td>
+					<td>&nbsp;</td>
+					<td class="sectionHeader"><b>Phone</b></td>
+					<td class="sectionHeader" align="right"><a data-target="#edit-phone-contact-informationDev" href="edit-phone-contact-information.html">edit</a></td>
+					<td>&nbsp;</td>
+					<td class="sectionHeader"><b>Profile</b></td>
+					<td class="sectionHeader" align="right"><a data-target="#sales-profile" href="sales-profile-dialog.html" onload="update()">update</a></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr><td colspan="3" valign="top">
+						<span>{{data.address1}}</span><br/>
+						<div><span>{{data.address2}}</span><br/></div>
+						<span>{{data.city}}</span>&nbsp;<span>{{data.state}}</span>&nbsp;<span>{{data.zipCode}}</span><br/>
+						<span>{{data.country}}</span></td>
+					<td>&nbsp;</td>
+					<td colspan="2" valign="top">
+						<div>
+							{{phone.type}}:<span> {{phone.number}}</span>
+						</div>
+						<div><span class="fieldLabel">Best Time to Call</span><br><span>{{phone.best}}</span></div>
+						<div><span class="fieldLabel">Language Preference</span><br><span>{{phone.language}}</span></div>
+					</td>
+					<td>&nbsp;</td>
+					<td colspan="2" valign="top">
+						<div><span class="fieldLabel">Customer Since</span><br>{{profile.since}}</div>
+						<div><span class="fieldLabel">Established</span><br>{{profile.established}}</div>
+						<div><span class="fieldLabel">Employer</span><br>{{profile.employer}}</div>
+						<div><span class="fieldLabel">Home Owner</span><br>{{profile.owner}}</div>
+						<div><span class="fieldLabel">Notes</span><br>{{profile.note}}</div>
+					</td>
+					<td>&nbsp;</td>
+					<td valign="top">&nbsp;</td>
+				</tr>
+			</table>
+			<br/>
+			
+			<!-- ******ROW 3****** -->
+			<table class="qrTable">
+				<colgroup>
+					<col width="24%"/>
+					<col width="1%"/>
+					<col width="24%"/>
+					<col width="1%"/>
+					<col width="24%"/>
+					<col width="1%"/>
+					<col width="24%"/>
+					<col width="1%"/>
+				</colgroup>
+				<tr>
+					<td valign="top">
+						<table class="qrTable">
+							<colgroup>
+								<col width="61%"/>
+								<col width="39%"/>
+							</colgroup>
+							<tbody>
+							<tr>
+								<td class="sectionHeader"><b>Follow Up</b></td>
+								<td class="sectionHeader" align="right"><a data-target="#follow-up-add" href="follow-up-dialog.html">add</a></td>
+							</tr>
+							<tr>
+								<td style="padding: 5px; text-align: left;"><span>{{fup.followUp}}</span></td>
+								<td style="padding: 5px; text-align: right;"><span><a data-target="#follow-up-add" href="follow-up-dialog.html">{{fup.date}}</a></span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td style="padding: 5px; text-align: right;"><span><a data-target="#follow-up-add" href="follow-up-dialog.html">more...</a></span></td>
+							</tr>
+							</tbody>
+						</table>
+					</td>
+					<td>&nbsp;</td>
+					<td valign="top">
+						<table class="qrTable">
+							<colgroup>
+								<col width="61%"/>
+								<col width="39%"/>
+							</colgroup>
+							<tbody>
+							<tr>
+								<td class="sectionHeader"><b>Contact History</b></td>
+								<td class="sectionHeader" align="right"><a data-target="#contact-history-add" href="contact-history-add.html">add</a></td>
+							</tr>
+							<tr>
+								<td style="padding: 5px; text-align: left;"><span>{{contactHistory.historyType}}</span></td>
+								<td style="padding: 5px; text-align: right;"><a data-target="#contact-history-list" href="contact-history-list.html">{{fup.date}}</a></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td style="padding: 5px; text-align: right;"><a data-target="#contact-history-list" href="contact-history-list.html">more...</a></td>
+							</tr>
+							</tbody>
+						</table>
+					</td>
+					<td>&nbsp;</td>
+					<td valign="top">
+						<table class="qrTable">
+							<colgroup>
+								<col width="61%"/>
+								<col width="39%"/>
+							</colgroup>
+							<tbody>
+							<tr>
+								<td class="sectionHeader"><b>Lists</b></td>
+								<td class="sectionHeader" align="right"><a data-target="#remove-from-list" href="ng-include.html">remove</a></td>
+							</tr>
+							<tr>
+								<td style="padding: 5px; text-align: left;"><span>{{list.type}}</span></td>
+								<td style="padding: 5px; text-align: right;"><span><a data-target="#remove-from-list" href="ng-include.html">{{list.date}}</a></span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td style="padding: 5px; text-align: right;"><span><a data-target="#remove-from-list" href="ng-include.html">more...</a></span></td>
+							</tr>
+							</tbody>
+						</table>
+					</td>
+					<td>&nbsp;</td>
+					<td valign="top">
+						<table class="qrTable">
+							<colgroup>
+								<col width="61%"/>
+								<col width="39%"/>
+							</colgroup>
+							<tbody>
+							<tr>
+								<td class="sectionHeader"><b>Comments</b></td>
+							</tr>
+							<tr>
+								<td style="padding: 5px; text-align: left;"><span>{{comment.type}}</span></td>
+								<td style="padding: 5px; text-align: right;"><span><a data-target="" href="">{{comment.date}}</a></span></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td style="padding: 5px; text-align: right;"><span><a data-target="" href="">more...</a></span></td>
+							</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr style="background: url('') repeat-x left-bottom;">
+					<td colspan="10">&nbsp;</td>
+				</tr>
+			</table>
+			<br/>
+			
+			<!-- ******ROW 4****** -->
+			<table class="qrTable">
+				<colgroup>
+					<col width="19%"/>
+					<col width="17%"/>
+					<col width="17%"/>
+					<col width="30%"/>
+					<col width="17%"/>
+				</colgroup>
+				<tr style="border-botom: 1px solid #4b83b3;">
+					<td class="productHeader headerLine" colspan="5"><b>Product &amp; Service Summary</b></td>
+				</tr>
+				<tr style="background: url('') repeat;">
+					<td class="productCell productHeaderCell">1. Verify Right Account</td>
+					<td class="productCell productHeaderCell">Checking</td>
+					<td class="productCell productHeaderCell">Prepaid</td>
+					<td class="productCell productHeaderCell">Saving/CD</td>
+					<td class="productCell productHeaderCell">&nbsp;</td>
+				</tr>
+				<tr style="background: url('') repeat;">
+					<td class="productCell">2. Convienence &amp; Account Protection</td>
+					<td class="productCell">Direct Deposit</td>
+					<td class="productCell">Debit</td>
+					<td class="productCell">
+						<table>
+							<tr>
+								<td width="45%" style="vertical-align: middle;">Online Banking</td>
+								<td width="10%">&nbsp;</td>
+								<td width="45%" style="vertical-align: middle;">Online Bill Pay</td>
+							</tr>
+						</table>
+						<td class="productCell">Credit card</td>
+				</tr>
+				<tr style="background: url('') repeat;">
+					<td class="productCell"></td>
+					<td class="productCell">Alerts</td>
+					<td class="productCell">OverDraft</td>
+					<td class="productCell">Debit Card Coverage</td>
+				</tr>
+				<tr style="background: url('') repeat;">
+					<td class="productCell productHeaderCell">3. Do It or Refer It</td>
+					<td class="productCell productHeaderCell">Loan/Line</td>
+					<td class="productCell productHeaderCell">Mortgage</td>
+					<td class="productCell productHeaderCell">Investments</td>
+					<td class="productCell productHeaderCell">Business</td>
+				</tr>
+			</table>
+			<table class="qrTable">
+				<colgroup>
+					<col width="50%"/>
+					<col width="50%"/>
+				</colgroup>
+				<tr>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td><b>HouseHold Balance</b>&nbsp;&nbsp;&nbsp;</td>
+					<td><b>Annualized Profit</b>&nbsp;&nbsp;&nbsp;</td>
+				</tr>
+				<tr style="background: url('') repeat;">
+					<td colspan="3">&nbsp;</td>
+				</tr>
+			</table>
+			<br/><br/>
+			
+			<!-- ******ROW 5****** -->
+			<table>
+				<colgroup>
+					<col width="100%">
+				</colgroup>
+				<tr>
+					<td class="productCell headerLine"><b>Customer Accounts</b></td>
+				</tr>
+			</table>
+			<table class="qrTable">
+				<colgroup>
+					<col width="15%"/>
+					<col width="25%"/>
+					<col width="9%"/>
+					<col width="9%"/>
+					<col width="8%"/>
+					<col width="1%"/>
+					<col width="17%"/>
+					<col width="9%"/>
+					<col width="9%"/>
+					<col width="8%"/>
+					<col width="6%"/>
+					<col width="1%"/>
+				</colgroup>
+				<tr style="background-color: #eeeeee;">
+					<td class="productCell clHeaderCell">Account #</td>
+					<td class="productCell clHeaderCell">Type</td>
+					<td class="productCell clHeaderCell">Status</td>
+					<td class="productCell clHeaderCell">Ownership</td>
+					<td class="productCell clHeaderCell">Balance</td>
+					<td class="productCell clHeaderCell"></td>
+					<td class="productCell clHeaderCell">Opened</td>
+					<td class="productCell clHeaderCell">Maturity</td>
+					<td class="productCell clHeaderCell">Limit</td>
+					<td class="productCell clHeaderCell">Rate</td>
+					<td class="productCell clHeaderCell"></td>
+				</tr>
+				<tr>
+					<td><a data-target="#transaction-detail" href="convert-and-link.html">{{account.accountNumber}}</a></td>
+					<td><a data-target="#account-detail" href="convert-and-link.html">{{account.type}}</a></td>
+					<td><span>{{account.status}}</span></td>
+					<td><span>{{account.ownership}}</span></td>
+					<td><span>${{account.balance}}</span></td>
+					<td>&nbsp;</td>
+					<td><span>{{account.open}}</span></td>
+					<td><span>{{account.maturity}}</span></td>
+					<td><span>{{account.limit}}</span></td>
+					<td><span>{{account.rate}}%</span></td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<div data-ng-include ="convert-and-link.html">
+
+</div>
+
+</body>
+</html>
