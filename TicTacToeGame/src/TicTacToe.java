@@ -188,7 +188,7 @@ public class TicTacToe extends JFrame implements ActionListener{
 					player = 0;
 
 				}else if(help == e.getSource()){
-					JOptionPane.showMessageDialog(null, "Really!! \nYou need help for Playing this Tic-Tac-Toe");
+					JOptionPane.showMessageDialog(null, "Really?? \nYou need help for Playing this Tic-Tac-Toe");
 				}else if(author == e.getSource()){
 					JOptionPane.showMessageDialog(null, "Author : Padam Dangal\nVersion : 1.0.0");
 				}
