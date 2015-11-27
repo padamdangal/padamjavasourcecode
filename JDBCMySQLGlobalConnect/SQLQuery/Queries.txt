@@ -1,0 +1,15 @@
+CREATE TABLE users (
+    firstName VARCHAR(255),
+    LastName VARCHAR(255),
+    Age INT(255),
+    Sex VARCHAR(255),
+    Email VARCHAR(255),
+    Country VARCHAR(255),
+    UserID VARCHAR(255),
+    Password VARCHAR(255),
+    SecurityQuestion1 VARCHAR(1000),
+    Answer1 VARCHAR(1000),
+    SecurityQuestion2 VARCHAR(1000),
+    Answer2 VARCHAR(1000)
+);
+    

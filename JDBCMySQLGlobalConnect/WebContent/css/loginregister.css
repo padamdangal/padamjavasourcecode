@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+.model-content{
+	width: 99.5%;
+	background-color: #CCFF99;
+	padding: 0.1px 2px 2px 2px;
+}
+
+.model-header{
+	font-weight: bold;
+	font-size: 140%;
+	color: blue;
+	text-align: center;
+	height: 40px;
+}
+
+.model-body{
+	width: 100%;
+    border: 1px solid darkgrey;
+	background: #ff7f00;
+	height: 540px;
+	margin: 0px;
+	padding-top: 0px;
+}
+.link{
+	width: 100%;
+	font-weight: bold;
+	background-color: #ff7f00; 
+	padding: 20px -50px 0px 18px;
+}
+.login{
+	width: 100%;
+	font-weight: normal;
+	color: black;
+	background-color: #FFFF99;
+	border-right: 2px solid darkgrey;
+}
+
+.footer{
+	background-color: #CCFF99;
+	color: red;
+	text-align: center;
+	padding: 15px;
+	width: 162.75%;
+	float: left;
+	clear: both;
+}
+.fieldlable{
+	font-size: 85%;
+}
+.requiredfield{
+	font-size: 85%;
+	font-weight: bold;
+	color: #0000CC;
+}
+.requirefieldindicator{
+	color: #FF0000;
+}
+.logintable .fieldlable{
+	font-size: 20px;
+}
+fieldset .fieldlable{
+	font-size: 85%;
+	color: #000;
+}
