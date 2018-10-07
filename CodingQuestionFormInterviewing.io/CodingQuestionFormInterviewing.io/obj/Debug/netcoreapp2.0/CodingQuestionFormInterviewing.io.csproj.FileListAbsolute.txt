@@ -1,0 +1,11 @@
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\bin\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.deps.json
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\bin\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.runtimeconfig.json
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\bin\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.runtimeconfig.dev.json
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\bin\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.dll
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\bin\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.pdb
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\obj\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.csprojResolveAssemblyReference.cache
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\obj\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.csproj.CoreCompileInputs.cache
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\obj\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.AssemblyInfoInputs.cache
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\obj\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.AssemblyInfo.cs
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\obj\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.dll
+C:\Users\banis\source\repos\CodingQuestionFormInterviewing.io\CodingQuestionFormInterviewing.io\obj\Debug\netcoreapp2.0\CodingQuestionFormInterviewing.io.pdb
